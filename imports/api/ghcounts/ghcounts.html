@@ -1,0 +1,32 @@
+<template name="ghcounts">
+    <div class="page not-found">
+        <nav>
+            <div class="nav-group">
+                <a href="#" class="js-menu nav-item"><span class="icon-menu"></span></a>
+            </div>
+            <div style="position:relative">
+                <div id="quickSearch" style="display:none">
+                   <div class="year item"><ul><li class="title">年份</li><li class="choosed">2013</li><li>2014</li><li>2015</li></ul></div>
+                    <div class="quarter item"><ul><li class="title">季度</li><li data_v="1">一季度</li><li data_v="2">二季度</li><li data_v="3">三季度</li><li data_v="4">四季度</li></ul></div>
+                </div>
+                {{#if showQuickSearch}}
+                    <span class="icontip icon-search"></span>
+                    {{else}}
+                    <span class="icontip icon-arrow-down"></span>
+                    {{/if}}
+
+            </div>
+        </nav>
+
+        <div class="content-scrollable">
+            {{> chartRender}}
+            <div class="chartShowChange options-mobile">
+                <span class="icon-enlarge2 disable"></span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="chartRender">
+    <div id="container-column" style="min-width: 310px;"></div>
+</template>
